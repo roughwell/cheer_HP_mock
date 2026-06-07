@@ -82,14 +82,16 @@
         object-fit: cover;
     }
     @keyframes slide {
-        0%   { transform: translateX(0); }
-        33%  { transform: translateX(0); }
+        0%   { transform: translateX(0); }       /* 1枚目表示 */
+        20%  { transform: translateX(0); }       /* 停止（約5秒） */
 
-        40%  { transform: translateX(-100%); }
-        66%  { transform: translateX(-100%); }
+        33%  { transform: translateX(-100%); }   /* 2枚目へ移動 */
+        53%  { transform: translateX(-100%); }   /* 停止（約5秒） */
 
-        73%  { transform: translateX(-200%); }
-        100% { transform: translateX(-200%); }
+        66%  { transform: translateX(-200%); }   /* 3枚目へ移動 */
+        86%  { transform: translateX(-200%); }   /* 停止（約5秒） */
+
+        100% { transform: translateX(0); }       /* 最初に戻る */
     }
     /* セクション */
     section {
