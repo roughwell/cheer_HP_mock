@@ -64,40 +64,38 @@
         right: 0;
     }
 
-    /* スライドショー */
-    .slideshow {
-        margin-top: 60px;
+/* スライドショー（BringFlower方式） */
+    .slide-container {
         width: 100%;
+        height: 250px;
         overflow: hidden;
         position: relative;
     }
-    .slide {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        opacity: 0;
-        animation: fade 15s infinite;
+
+    .slide-wrapper {
+        display: flex;
+        width: 300%; /* 画像3枚分 */
+        animation: slide-flow 15s infinite linear;
     }
-    .slides img {
+
+    .slide {
         width: 100%;
         height: 250px;
         object-fit: cover;
     }
-    
-    @keyframes slide {
-        0%   { transform: translateX(0); }       /* 1枚目表示 */
-        20%  { transform: translateX(0); }       /* 停止（約5秒） */
 
-        33%  { transform: translateX(-100%); }   /* 2枚目へ移動 */
-        53%  { transform: translateX(-100%); }   /* 停止（約5秒） */
+    /* 横に流れるアニメーション */
+    @keyframes slide-flow {
+        0%   { transform: translateX(0); }
+        33%  { transform: translateX(0); }
 
-        66%  { transform: translateX(-200%); }   /* 3枚目へ移動 */
-        86%  { transform: translateX(-200%); }   /* 停止（約5秒） */
+        40%  { transform: translateX(-100%); }
+        66%  { transform: translateX(-100%); }
 
-        100% { transform: translateX(0); }       /* 最初に戻る */
+        73%  { transform: translateX(-200%); }
+        100% { transform: translateX(-200%); }
     }
+
     /* セクション */
     section {
         padding: 20px;
@@ -185,11 +183,11 @@ function toggleMenu() {
 </nav>
 
 <!-- スライドショー -->
-<div class="slideshow">
-    <div class="slides">
-        <img src="image/shugo.jpg" alt="集合写真">
-        <img src="image/taikai.jpg" alt="大会">
-        <img src="image/minoh_event.jpg" alt="イベント">
+<div class="slide-container">
+    <div class="slide-wrapper">
+        <img class="slide" src="image/shugo.jpg" alt="集合写真">
+        <img class="slide" src="image/taikai.jpg" alt="大会">
+        <img class="slide" src="image/minoh_event.jpg" alt="イベント">
     </div>
 </div>
 
