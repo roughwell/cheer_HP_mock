@@ -64,38 +64,39 @@
         right: 0;
     }
 
-/* スライドショー（BringFlower方式） */
-    .slide-container {
+    /* フェード式スライドショー */
+    .fade-slideshow {
+        position: relative;
         width: 100%;
         height: 250px;
         overflow: hidden;
-        position: relative;
     }
-
-    .slide-wrapper {
-        display: flex;
-        width: 300%; /* 画像3枚分 */
-        animation: slide-flow 15s infinite linear;
-    }
-
-    .slide {
+    
+    .fade-slide {
+        position: absolute;
+        top: 0;
+        left: 0;
         width: 100%;
         height: 250px;
         object-fit: cover;
+        opacity: 0;
+        animation: fadeAnime 15s infinite;
     }
-
-    /* 横に流れるアニメーション */
-    @keyframes slide-flow {
-        0%   { transform: translateX(0); }
-        33%  { transform: translateX(0); }
-
-        40%  { transform: translateX(-100%); }
-        66%  { transform: translateX(-100%); }
-
-        73%  { transform: translateX(-200%); }
-        100% { transform: translateX(-200%); }
+    
+    /* 各画像の開始タイミングをずらす */
+    .fade-slide:nth-child(1) { animation-delay: 0s; }
+    .fade-slide:nth-child(2) { animation-delay: 5s; }
+    .fade-slide:nth-child(3) { animation-delay: 10s; }
+    
+    /* フェードアニメーション */
+    @keyframes fadeAnime {
+        0%   { opacity: 0; }
+        5%   { opacity: 1; }
+        30%  { opacity: 1; }
+        35%  { opacity: 0; }
+        100% { opacity: 0; }
     }
-
+    
     /* セクション */
     section {
         padding: 20px;
@@ -183,12 +184,10 @@ function toggleMenu() {
 </nav>
 
 <!-- スライドショー -->
-<div class="slide-container">
-    <div class="slide-wrapper">
-        <img class="slide" src="image/shugo.jpg" alt="集合写真">
-        <img class="slide" src="image/taikai.jpg" alt="大会">
-        <img class="slide" src="image/minoh_event.jpg" alt="イベント">
-    </div>
+<div class="fade-slideshow">
+    <img src="image/shugo.jpg" class="fade-slide" alt="集合写真">
+    <img src="image/taikai.jpg" class="fade-slide" alt="大会">
+    <img src="image/minoh_event.jpg" class="fade-slide" alt="イベント">
 </div>
 
 <section>
