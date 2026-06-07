@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>スタッフ紹介 | Sugger Rabbits</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: "Helvetica", "Arial", sans-serif;
+        background: #fffafc;
+        color: #333;
+    }
+
+    /* ヘッダー */
+    header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 60px;
+        background: #ff7ac2;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 15px;
+        z-index: 1000;
+        color: white;
+    }
+    header img.logo {
+        height: 40px;
+        border-radius: 5px;
+    }
+    header .team-name {
+        font-size: 18px;
+        font-weight: bold;
+        margin-left: 10px;
+    }
+
+    /* ハンバーガーメニュー */
+    .menu-btn {
+        font-size: 28px;
+        cursor: pointer;
+    }
+    nav {
+        position: fixed;
+        top: 60px;
+        right: -200px;
+        width: 200px;
+        height: 100%;
+        background: #ffe0f0;
+        transition: 0.3s;
+        padding-top: 20px;
+        z-index: 999;
+    }
+    nav a {
+        display: block;
+        padding: 15px;
+        color: #333;
+        text-decoration: none;
+        border-bottom: 1px solid #ffc4e0;
+    }
+    nav.open {
+        right: 0;
+    }
+
+    /* セクション */
+    section {
+        padding: 20px;
+        margin-top: 60px;
+    }
+    h2 {
+        font-size: 20px;
+        border-left: 5px solid #ff7ac2;
+        padding-left: 10px;
+        margin-bottom: 10px;
+    }
+    h3 {
+        font-size: 18px;
+        margin-top: 20px;
+    }
+
+    /* スタッフカード */
+    .staff-card {
+        background: #ffffff;
+        border: 2px solid #ffb6d9;
+        border-radius: 10px;
+        padding: 15px;
+        margin: 20px 0;
+        text-align: center;
+    }
+    .staff-card img {
+        width: 100%;
+        max-width: 250px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+    .staff-card .name {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+    .staff-card .career {
+        font-size: 14px;
+        line-height: 1.6;
+        color: #555;
+    }
+
+    /* フッタ */
+    footer {
+        background: #ff7ac2;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        margin-top: 40px;
+    }
+</style>
+
+<script>
+function toggleMenu() {
+    document.getElementById("nav").classList.toggle("open");
+}
+</script>
+
+</head>
+<body>
+
+<header>
+    <div style="display:flex; align-items:center;">
+        <img src="https://source.unsplash.com/100x100/?rabbit,logo" class="logo">
+        <span class="team-name">Sugger Rabbits</span>
+    </div>
+    <div class="menu-btn" onclick="toggleMenu()">☰</div>
+</header>
+
+<nav id="nav">
+    <a href="home.html">ホーム</a>
+    <a href="about.html">概要</a>
+    <a href="activity.html">活動紹介</a>
+    <a href="staff.html">スタッフ紹介</a>
+    <a href="contact.html">問い合わせ</a>
+    <a href="https://instagram.com" target="_blank">Instagram</a>
+</nav>
+
+<section>
+    <h2>スタッフ紹介</h2>
+    <p>経験豊富なコーチ陣が、初心者から大会選手まで丁寧に指導します。</p>
+</section>
+
+<section>
+    <h3>ヘッドコーチ</h3>
+    <div class="staff-card">
+        <img src="https://source.unsplash.com/400x400/?coach,woman" alt="ヘッドコーチ写真">
+        <div class="name">山田 さくら</div>
+        <div class="career">
+            <strong>チア歴：</strong> 10年<br>
+            <strong>コーチ歴：</strong> 6年<br>
+            全国大会出場経験多数。基礎から大会レベルまで幅広く指導。
+        </div>
+    </div>
+</section>
+
+<section>
+    <h3>コーチ</h3>
+
+    <div class="staff-card">
+        <img src="https://source.unsplash.com/400x400/?cheer,coach" alt="コーチ写真">
+        <div class="name">佐藤 みゆ</div>
+        <div class="career">
+            <strong>チア歴：</strong> 8年<br>
+            <strong>コーチ歴：</strong> 3年<br>
+            明るく丁寧な指導で、初心者にも大人気。
+        </div>
+    </div>
+
+    <div class="staff-card">
+        <img src="https://source.unsplash.com/400x400/?fitness,woman" alt="コーチ写真">
+        <div class="name">中村 あい</div>
+        <div class="career">
+            <strong>チア歴：</strong> 6年<br>
+            <strong>コーチ歴：</strong> 2年<br>
+            柔軟性トレーニングとダンス指導が得意。
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div style="margin-bottom:10px; font-weight:bold;">Sugger Rabbits</div>
+    <a href="home.html" style="color:white; text-decoration:none; margin:0 5px;">ホーム</a> |
+    <a href="about.html" style="color:white; text-decoration:none; margin:0 5px;">概要</a> |
+    <a href="activity.html" style="color:white; text-decoration:none; margin:0 5px;">活動紹介</a> |
+    <a href="staff.html" style="color:white; text-decoration:none; margin:0 5px;">スタッフ紹介</a> |
+    <a href="contact.html" style="color:white; text-decoration:none; margin:0 5px;">問い合わせ</a> |
+    <a href="https://instagram.com" target="_blank" style="color:white; text-decoration:none; margin:0 5px;">Instagram</a>
+</footer>
+
+</body>
+</html>

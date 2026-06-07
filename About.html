@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>概要 | Sugger Rabbits</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: "Helvetica", "Arial", sans-serif;
+        background: #fffafc;
+        color: #333;
+    }
+
+    /* ヘッダー */
+    header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 60px;
+        background: #ff7ac2;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 15px;
+        z-index: 1000;
+        color: white;
+    }
+    header img.logo {
+        height: 40px;
+        border-radius: 5px;
+    }
+    header .team-name {
+        font-size: 18px;
+        font-weight: bold;
+        margin-left: 10px;
+    }
+
+    /* ハンバーガーメニュー */
+    .menu-btn {
+        font-size: 28px;
+        cursor: pointer;
+    }
+    nav {
+        position: fixed;
+        top: 60px;
+        right: -200px;
+        width: 200px;
+        height: 100%;
+        background: #ffe0f0;
+        transition: 0.3s;
+        padding-top: 20px;
+        z-index: 999;
+    }
+    nav a {
+        display: block;
+        padding: 15px;
+        color: #333;
+        text-decoration: none;
+        border-bottom: 1px solid #ffc4e0;
+    }
+    nav.open {
+        right: 0;
+    }
+
+    /* セクション */
+    section {
+        padding: 20px;
+        margin-top: 60px;
+    }
+    h2 {
+        font-size: 20px;
+        border-left: 5px solid #ff7ac2;
+        padding-left: 10px;
+        margin-bottom: 10px;
+    }
+    .photo {
+        width: 100%;
+        border-radius: 10px;
+        margin: 10px 0;
+    }
+
+    /* リンクボタン */
+    .link-btn {
+        display: inline-block;
+        background: #ff7ac2;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 25px;
+        text-decoration: none;
+        font-weight: bold;
+        margin-top: 10px;
+    }
+
+    /* フッタ */
+    footer {
+        background: #ff7ac2;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        margin-top: 40px;
+    }
+</style>
+
+<script>
+function toggleMenu() {
+    document.getElementById("nav").classList.toggle("open");
+}
+</script>
+
+</head>
+<body>
+
+<header>
+    <div style="display:flex; align-items:center;">
+        <img src="https://source.unsplash.com/100x100/?rabbit,logo" class="logo">
+        <span class="team-name">Sugger Rabbits</span>
+    </div>
+    <div class="menu-btn" onclick="toggleMenu()">☰</div>
+</header>
+
+<nav id="nav">
+    <a href="home.html">ホーム</a>
+    <a href="about.html">概要</a>
+    <a href="activity.html">活動紹介</a>
+    <a href="staff.html">スタッフ紹介</a>
+    <a href="contact.html">問い合わせ</a>
+    <a href="https://instagram.com" target="_blank">Instagram</a>
+</nav>
+
+<section>
+    <h2>チーム紹介</h2>
+    <p>元気いっぱい！大阪で活動するチアリーディングチーム「Sugger Rabbits」です。初心者から経験者まで、笑顔で楽しく活動しています。</p>
+</section>
+
+<section>
+    <h2>チアの魅力</h2>
+    <p>チアは「応援する心」を育てるスポーツ。仲間と協力し、笑顔でパフォーマンスする楽しさが魅力です。</p>
+</section>
+
+<section>
+    <h2>対外活動</h2>
+
+    <h3>大会出場</h3>
+    <p>全国大会・地域大会に積極的に参加しています。</p>
+    <img src="https://source.unsplash.com/800x600/?cheerleading,competition" class="photo">
+    <p>・大会名：〇〇チアリーディング選手権<br>
+       ・時期：10月・3月</p>
+
+    <h3>地域イベント</h3>
+    <p>地域のお祭りやスポーツイベントにも出演しています。</p>
+    <img src="https://source.unsplash.com/800x600/?festival,performance" class="photo">
+    <p>・イベント名：〇〇フェスティバル</p>
+</section>
+
+<section>
+    <h2>活動概要</h2>
+    <p>・毎週月曜 19:00〜21:00 @ 千里体育館<br>
+       ・大会前は土日不定期で2〜3時間 @ 豊中・箕面市内</p>
+
+    <a href="activity.html" class="link-btn">活動紹介ページへ</a>
+</section>
+
+<section>
+    <h2>スタッフ紹介</h2>
+    <a href="staff.html" class="link-btn">スタッフ紹介を見る</a>
+</section>
+
+<footer>
+    <div style="margin-bottom:10px; font-weight:bold;">Sugger Rabbits</div>
+    <a href="home.html" style="color:white; text-decoration:none; margin:0 5px;">ホーム</a> |
+    <a href="about.html" style="color:white; text-decoration:none; margin:0 5px;">概要</a> |
+    <a href="activity.html" style="color:white; text-decoration:none; margin:0 5px;">活動紹介</a> |
+    <a href="staff.html" style="color:white; text-decoration:none; margin:0 5px;">スタッフ紹介</a> |
+    <a href="contact.html" style="color:white; text-decoration:none; margin:0 5px;">問い合わせ</a> |
+    <a href="https://instagram.com" target="_blank" style="color:white; text-decoration:none; margin:0 5px;">Instagram</a>
+</footer>
+
+</body>
+</html>

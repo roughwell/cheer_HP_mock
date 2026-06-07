@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sugger Rabbits | チアリーディングチーム</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: "Helvetica", "Arial", sans-serif;
+        background: #fffafc;
+        color: #333;
+    }
+
+    /* ヘッダー */
+    header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 60px;
+        background: #ff7ac2;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 15px;
+        z-index: 1000;
+        color: white;
+    }
+    header img.logo {
+        height: 40px;
+        border-radius: 5px;
+    }
+    header .team-name {
+        font-size: 18px;
+        font-weight: bold;
+        margin-left: 10px;
+    }
+
+    /* ハンバーガーメニュー */
+    .menu-btn {
+        font-size: 28px;
+        cursor: pointer;
+    }
+    nav {
+        position: fixed;
+        top: 60px;
+        right: -200px;
+        width: 200px;
+        height: 100%;
+        background: #ffe0f0;
+        transition: 0.3s;
+        padding-top: 20px;
+        z-index: 999;
+    }
+    nav a {
+        display: block;
+        padding: 15px;
+        color: #333;
+        text-decoration: none;
+        border-bottom: 1px solid #ffc4e0;
+    }
+    nav.open {
+        right: 0;
+    }
+
+    /* スライドショー */
+    .slideshow {
+        margin-top: 60px;
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+    }
+    .slides {
+        display: flex;
+        width: 300%;
+        animation: slide 12s infinite;
+    }
+    .slides img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+    }
+    @keyframes slide {
+        0% { transform: translateX(0); }
+        33% { transform: translateX(-100%); }
+        66% { transform: translateX(-200%); }
+        100% { transform: translateX(0); }
+    }
+
+    /* セクション */
+    section {
+        padding: 20px;
+    }
+    h2 {
+        font-size: 20px;
+        border-left: 5px solid #ff7ac2;
+        padding-left: 10px;
+        margin-bottom: 10px;
+    }
+    .insta-btn {
+        display: inline-block;
+        background: #ff7ac2;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 25px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    /* メンバー募集固定バナー */
+    .recruit-banner {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: 25%;
+        background: rgba(255, 122, 194, 0.9);
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 10px;
+        z-index: 1000;
+    }
+    .recruit-banner a {
+        margin-top: 10px;
+        background: white;
+        color: #ff7ac2;
+        padding: 10px 20px;
+        border-radius: 20px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    /* フッタ */
+    footer {
+        background: #ff7ac2;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        margin-bottom: 25%;
+    }
+</style>
+
+<script>
+function toggleMenu() {
+    document.getElementById("nav").classList.toggle("open");
+}
+</script>
+
+</head>
+<body>
+
+<header>
+    <div style="display:flex; align-items:center;">
+        <img src="https://source.unsplash.com/100x100/?rabbit,logo" class="logo">
+        <span class="team-name">Sugger Rabbits</span>
+    </div>
+    <div class="menu-btn" onclick="toggleMenu()">☰</div>
+</header>
+
+<nav id="nav">
+    <a href="home.html">ホーム</a>
+    <a href="about.html">概要</a>
+    <a href="activity.html">活動紹介</a>
+    <a href="staff.html">スタッフ紹介</a>
+    <a href="contact.html">問い合わせ</a>
+    <a href="https://instagram.com" target="_blank">Instagram</a>
+</nav>
+
+<!-- スライドショー -->
+<div class="slideshow">
+    <div class="slides">
+        <img src="https://source.unsplash.com/800x600/?cheerleading,team" alt="">
+        <img src="https://source.unsplash.com/800x600/?cheer,sports" alt="">
+        <img src="https://source.unsplash.com/800x600/?girls,team" alt="">
+    </div>
+</div>
+
+<section>
+    <h2>チーム紹介</h2>
+    <p>元気いっぱい！大阪で活動するチアリーディングチーム「Sugger Rabbits」です。</p>
+</section>
+
+<section>
+    <h2>活動内容</h2>
+    <p>大会出場・地域イベント出演・クリニック開催など、年間を通して幅広く活動しています。</p>
+</section>
+
+<section>
+    <h2>チアの魅力</h2>
+    <p>チアは「応援する心」を育てるスポーツ。仲間と協力し、笑顔でパフォーマンスする楽しさが魅力です。</p>
+</section>
+
+<section>
+    <h2>スタッフ紹介</h2>
+    <p>経験豊富なコーチ陣が、初心者から大会選手まで丁寧に指導します。</p>
+</section>
+
+<section style="text-align:center;">
+    <a class="insta-btn" href="https://instagram.com" target="_blank">Instagramを見る</a>
+</section>
+
+<!-- メンバー募集バナー -->
+<div class="recruit-banner">
+    <div style="font-size:20px; font-weight:bold;">メンバー募集中！</div>
+    <a href="contact.html">お問い合わせはこちら</a>
+</div>
+
+<footer>
+    <div style="margin-bottom:10px; font-weight:bold;">Sugger Rabbits</div>
+    <a href="home.html" style="color:white; text-decoration:none; margin:0 5px;">ホーム</a> |
+    <a href="about.html" style="color:white; text-decoration:none; margin:0 5px;">概要</a> |
+    <a href="activity.html" style="color:white; text-decoration:none; margin:0 5px;">活動紹介</a> |
+    <a href="staff.html" style="color:white; text-decoration:none; margin:0 5px;">スタッフ紹介</a> |
+    <a href="contact.html" style="color:white; text-decoration:none; margin:0 5px;">問い合わせ</a> |
+    <a href="https://instagram.com" target="_blank" style="color:white; text-decoration:none; margin:0 5px;">Instagram</a>
+</footer>
+
+</body>
+</html>
