@@ -135,11 +135,14 @@ function toggleMenu() {
 <body>
 
 <header>
-    <div style="display:flex; align-items:center;">
-        <img src="https://source.unsplash.com/100x100/?rabbit,logo" class="logo">
-        <span class="team-name">Sugger Rabbits</span>
+    <div style="display:flex; align-items:center; gap:8px;">
+        <img src="image/logo.jpg" class="logo">
+        <img src="image/teamname.jpg" class="team-title">
     </div>
-    <div class="menu-btn" onclick="toggleMenu()">☰</div>
+    <div style="display:flex; align-items:center; gap:6px; margin-right:10px;">
+        <span style="font-size:16px; font-weight:bold;">menu</span>    
+        <div class="menu-btn" onclick="toggleMenu()">☰</div>
+    </div>
 </header>
 
 <nav id="nav">
